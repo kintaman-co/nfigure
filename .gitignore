@@ -1,0 +1,52 @@
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+### Node ###
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# ビルド結果を持ち込まない
+dist
+coverage
+
+# Mac OS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# ほか
+*.pem
+
+# Visual Studio Code関連は専門担当が手動で追加し、原則追加しない
+.vscode/
+*.code-workspace
+.history
+
+# 環境設定ファイル
+config.*.local.json
+# パッチファイルはignoreしません
+
