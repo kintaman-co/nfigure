@@ -1,6 +1,7 @@
 {
-  "name": "@kintaman-co/nfigure",
+  "name": "@kintaman-co/nfigure-examples",
   "version": "0.0.1",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc"
@@ -9,5 +10,9 @@
   "author": "Kintaman Team <ao@kintaman.co> (https://kintaman.co)",
   "homepage": "https://kintaman.co/nfigure",
   "license": "MIT",
-  "description": "A configuration loader for Node.js "
+  "description": "Typebox validator for nfigure",
+  "dependencies": {
+    "@kintaman-co/nfigure": "^0.0.1",
+    "@sinclair/typebox": "^0.32.34"
+  }
 }

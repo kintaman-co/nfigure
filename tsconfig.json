@@ -14,7 +14,7 @@
 
     "baseUrl": ".",
     "paths": {
-      "@kintaman-co/*": ["packages/*"]
+      "@kintaman-co/*": ["packages/*/dist"]
     }
   },
   "include": ["packages/**/*.ts"],
