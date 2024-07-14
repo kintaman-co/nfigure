@@ -7,5 +7,7 @@
     "declarationMap": true,
     "composite": true,
     "tsBuildInfoFile": "dist/.tsbuildinfo"
-  }
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules", "dist"]
 }

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { ConfigInternal, ValidatorConfig } from "loader";
+import { ConfigInternal, ValidatorConfig } from "./loader";
 
 export default function verAssert<T extends object>(
   expectedVersion: number,

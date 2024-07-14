@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "preinstall": "echo \"Do not install this package directly. Use the root package.json to install this package.\" && exit 1",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc"
   },
@@ -12,20 +11,11 @@
   "homepage": "https://kintaman.co/nfigure",
   "license": "MIT",
   "description": "A configuration loader for Node.js ",
-  "devDependencies": {
-    "@eslint/js": "^9.6.0",
-    "@types/eslint__js": "^8.42.3",
-    "@types/node": "^20",
-    "@typescript-eslint/eslint-plugin": "^7.13.0",
-    "@typescript-eslint/parser": "^7.13.0",
-    "eslint": "^8.57.0",
-    "eslint-plugin-import": "^2.29.1",
-    "prettier": "^3",
-    "typescript": "^5.5.2",
-    "typescript-eslint": "^7.14.1"
-  },
   "packageManager": "npm@9.6.6",
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "@sinclair/typebox": "^0.32.34"
+  }
 }

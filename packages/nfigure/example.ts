@@ -1,7 +1,7 @@
-import typeboxValidator from "typeboxValidator";
+import typeboxValidator from "./typeboxValidator";
 import { load } from "./loader";
 import { Type } from "@sinclair/typebox";
-import verAssert from "verAssert";
+import verAssert from "./verAssert";
 
 const dbSchema = Type.Union(
   [
