@@ -17,6 +17,6 @@
       "@kintaman-co/*": ["packages/*/dist"]
     }
   },
-  "include": ["packages/**/*.ts"],
+  "include": ["packages/**/*.ts", "packages/nfigure/index.test.js"],
   "exclude": ["node_modules", "dist", "packages/**/dist"]
 }

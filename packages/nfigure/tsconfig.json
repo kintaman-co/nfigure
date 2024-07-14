@@ -8,6 +8,6 @@
     "composite": true,
     "tsBuildInfoFile": "dist/.tsbuildinfo"
   },
-  "include": ["**/*.ts"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["**/*.ts", "index.test.js"],
+  "exclude": ["node_modules", "dist", "**/*.test.ts"]
 }

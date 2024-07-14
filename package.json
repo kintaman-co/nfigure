@@ -18,19 +18,21 @@
   "description": "A configuration loader for Node.js ",
   "devDependencies": {
     "@eslint/js": "^9.6.0",
+    "@jest/globals": "^29.7.0",
     "@types/eslint__js": "^8.42.3",
     "@types/node": "^20",
     "@typescript-eslint/eslint-plugin": "^7.13.0",
     "@typescript-eslint/parser": "^7.13.0",
     "eslint": "^8.57.0",
     "eslint-plugin-import": "^2.29.1",
+    "jest": "^29.7.0",
     "prettier": "^3",
+    "ts-jest": "^29.2.2",
     "typescript": "^5.5.2",
     "typescript-eslint": "^7.14.1"
   },
   "packageManager": "npm@9.6.6",
   "workspaces": [
     "packages/*"
-  ],
-  "dependencies": {}
+  ]
 }
