@@ -1,11 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { ConfigInternal, ValidatorConfig } from "./loader";
+
+import { CfgInternal, Validator } from "../cfgcfg";
 
 export default function verAssert<T extends object>(
   expectedVersion: number,
-  validator: ValidatorConfig<T>,
+  validator: Validator<T>,
 ) {
-  return (value: unknown, configInternal: ConfigInternal): value is T => {
+  return (value: unknown, configInternal: CfgInternal): value is T => {
     const config = value as Record<string, any>;
     if (config.version !== expectedVersion) {
       throw new Error(

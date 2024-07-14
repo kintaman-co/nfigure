@@ -1,19 +1,21 @@
 import { resolve } from "path";
-import { CfgInternal, Mode } from "../cfgcfg";
-import { readFileSync } from "fs";
+import { Mode, readFileSync } from "fs";
+import { CfgInternal } from "../cfgcfg";
 
-export function fileLoader(
-  path: string,
-  configInternal: CfgInternal,
-  mode: Mode,
-  fileFromEnv: boolean,
-): string {
-  let normalizedPath = path;
-  if (fileFromEnv) {
-    normalizedPath = resolve(process.cwd(), path);
-  }
+export function fileLoader() {
+  return (
+    path: string,
+    configInternal: CfgInternal,
+    mode: Mode,
+    fileFromEnv: boolean,
+  ): string => {
+    let normalizedPath = path;
+    if (fileFromEnv) {
+      normalizedPath = resolve(process.cwd(), path);
+    }
 
-  return readFileSync(normalizedPath, "utf-8");
+    return readFileSync(normalizedPath, "utf-8");
+  };
 }
 
 export default fileLoader;

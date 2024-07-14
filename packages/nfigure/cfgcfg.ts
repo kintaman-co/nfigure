@@ -1,5 +1,4 @@
 import defaultFileSearcher from "./fileSearcher/defaultFileSearcher";
-import { HelpMeTyping } from "./HelpMeTyping";
 import fileLoader from "./loaders/fileLoader";
 import jsonParser from "./parsers/jsonParser";
 import defaultValidator from "./validators/default";
@@ -83,7 +82,7 @@ export const defaultCfgCfg = {
     nodeEnv: "NODE_ENV",
   },
   validator: defaultValidator,
-  loader: fileLoader,
-  parser: jsonParser,
-  fileSearcher: defaultFileSearcher,
-};
+  loader: fileLoader(),
+  parser: jsonParser(),
+  fileSearcher: defaultFileSearcher(),
+} satisfies CfgInternal;
