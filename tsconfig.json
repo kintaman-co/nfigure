@@ -17,6 +17,10 @@
       "@kintaman-co/*": ["packages/*/dist"]
     }
   },
-  "include": ["packages/**/*.ts", "packages/nfigure/index.test.js"],
+  "include": [
+    "packages/**/*.ts",
+    "packages/nfigure/index.test.js",
+    "packages/nfigure/verAssert.xts"
+  ],
   "exclude": ["node_modules", "dist", "packages/**/dist"]
 }

@@ -1,6 +1,5 @@
-import { load } from "./loader";
-
-export const config = load({});
+import { nfigure } from "./nfigure";
+export const config = nfigure();
 export default config;
 
-export { load };
+export { nfigure };
