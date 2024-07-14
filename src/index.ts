@@ -1,3 +1,6 @@
-export function main() {
-  console.log("Hello World");
-}
+import { load } from "./loader";
+
+export const config = load({});
+export default config;
+
+export { load };
