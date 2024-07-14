@@ -12,10 +12,11 @@
     "resolveJsonModule": true,
     "composite": true,
 
-    "rootDir": "src",
-    "outDir": "dist",
-    "baseUrl": "src"
+    "baseUrl": ".",
+    "paths": {
+      "@kintaman-co/*": ["packages/*"]
+    }
   },
-  "include": ["src/**/*.ts", "src/**/*.json"],
+  "include": ["packages/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }

@@ -1,14 +1,10 @@
 {
-  "name": "nfigure",
+  "name": "@kintaman-co/nfigure",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "preinstall": "npx only-allow npm",
+    "preinstall": "echo \"Do not install this package directly. Use the root package.json to install this package.\" && exit 1",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint .",
-    "lintfix": "eslint --fix",
-    "format": "prettier --write .",
-    "formatcheck": "prettier --check .",
     "build": "tsc"
   },
   "keywords": [],
@@ -31,6 +27,5 @@
   "packageManager": "npm@9.6.6",
   "workspaces": [
     "packages/*"
-  ],
-  "dependencies": {}
+  ]
 }
