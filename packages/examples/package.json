@@ -2,15 +2,12 @@
   "name": "@kintaman-co/nfigure-examples",
   "version": "0.0.1",
   "private": true,
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
-  },
+  "scripts": {},
   "keywords": [],
   "author": "Kintaman Team <ao@kintaman.co> (https://kintaman.co)",
   "homepage": "https://kintaman.co/nfigure",
   "license": "MIT",
-  "description": "Typebox validator for nfigure",
+  "description": "An example for nfigure",
   "dependencies": {
     "@kintaman-co/nfigure": "^0.0.2",
     "@kintaman-co/nfigure-typebox": "^0.0.2",
