@@ -3,6 +3,7 @@ import { it, expect } from "@jest/globals";
 import { verAssert } from "./verAssert";
 import defaultValidator from "./default";
 import { defaultCfgCfg } from "../cfgcfg";
+
 it("should assert version correctly", () => {
   const ass = verAssert(1, defaultValidator);
   const cfgInt = {

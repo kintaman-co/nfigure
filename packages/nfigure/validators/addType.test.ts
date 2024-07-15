@@ -31,10 +31,10 @@ it("should work", () => {
 });
 
 it("should work with custom validator", () => {
-  const validator = addType<{ foo: string }>;
-  const validator2 = addType<{ bar: string }>;
+  const validator = addType<{ foo: string }>();
+  const validator2 = addType<{ bar: string }>();
 
-  const result = validator(validator2());
+  const result = validator(validator2, defaultCfgCfg);
 
-  expect(result).toBe(false);
+  expect(result).toBe(true);
 });

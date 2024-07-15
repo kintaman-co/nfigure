@@ -20,7 +20,7 @@ export function verAssert<T extends object>(
         `Invalid NODE_ENV: expected ${config.expectedNodeEnv}, got ${NODE_ENV}`,
       );
     }
-    if (config.expectedAppEnv === APP_ENV) {
+    if (config.expectedAppEnv !== APP_ENV) {
       throw new Error(
         `Invalid APP_ENV: expected ${config.expectedAppEnv}, got ${APP_ENV}`,
       );

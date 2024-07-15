@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { jest, it, expect } from "@jest/globals";
 const readFileSync = jest.fn();
-jest.mock("fs", () => {
+jest.mock("node:fs", () => {
   return {
     readFileSync,
   };
