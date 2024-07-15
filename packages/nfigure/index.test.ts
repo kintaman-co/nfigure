@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { beforeEach, expect, it, jest } from "@jest/globals";
-import { nfigure } from "./nfigure";
+import { nfigure } from "./index";
 import type { Parser, Loader, FileSearcher } from "./cfgcfg";
 import { typeboxValidator } from "@kintaman-co/nfigure-typebox";
 import { Type } from "@sinclair/typebox";
