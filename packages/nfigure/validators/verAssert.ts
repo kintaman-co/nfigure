@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 import { CfgInternal, Validator } from "../cfgcfg";
 
 export function verAssert<T extends object>(
@@ -7,7 +5,7 @@ export function verAssert<T extends object>(
   validator: Validator<T>,
 ) {
   return (value: unknown, configInternal: CfgInternal): value is T => {
-    const config = value as Record<string, any>;
+    const config = value as Record<string, unknown>;
     if (config.version !== expectedVersion) {
       throw new Error(
         `Invalid version: expected ${expectedVersion}, got ${config.version}`,
@@ -22,7 +20,7 @@ export function verAssert<T extends object>(
         `Invalid NODE_ENV: expected ${config.expectedNodeEnv}, got ${NODE_ENV}`,
       );
     }
-    if (config.expectedAppEnv !== APP_ENV) {
+    if (config.expectedAppEnv === APP_ENV) {
       throw new Error(
         `Invalid APP_ENV: expected ${config.expectedAppEnv}, got ${APP_ENV}`,
       );
