@@ -7,9 +7,11 @@
 - Simple and intuitive syntax
 - Supports patching and merging configurations
 - Can be loaded from files, environment variables, or other sources
+- Zero dependencies
 - Plugins feature for extending functionality
 - Supports multiple configuration formats (JSON, YAML, TOML, etc.)\*
 - Easy-to-setup helper scripts(WIP)
+- Deno support(Partially)
 - Type-safe configuration values\*
 - Validation\*
 - Version/Environment assertion\*
