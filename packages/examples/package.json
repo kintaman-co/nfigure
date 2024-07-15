@@ -12,7 +12,7 @@
   "license": "MIT",
   "description": "Typebox validator for nfigure",
   "dependencies": {
-    "@kintaman-co/nfigure": "^0.0.1",
+    "@kintaman-co/nfigure": "*",
     "@sinclair/typebox": "^0.32.34"
   }
 }
