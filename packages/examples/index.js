@@ -1,11 +1,14 @@
-import config, { nfigure } from "@kintaman-co/nfigure";
-import typeboxValidator from "@kintaman-co/nfigure-typebox";
+import { nfigure, config } from "@kintaman-co/nfigure";
+import { typeboxValidator } from "@kintaman-co/nfigure-typebox";
 import { Type } from "@sinclair/typebox";
-import assert from "node:assert/strict";
+import assert from "node:assert";
+import { log } from "node:console";
+
+debugger;
 
 assert.ok(config, "config should be loaded");
 assert.deepStrictEqual(
-  config,
+  config.toJSON(),
   {
     base: "The base value",
     overriden: "The patched value",
@@ -65,3 +68,5 @@ try {
 } catch (_) {
   assert.ok(true, "config validation failed");
 }
+
+log("All tests passed");

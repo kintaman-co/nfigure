@@ -1,17 +1,18 @@
 import { nfigure } from "./nfigure";
 
 let _config: Record<string, unknown> | null = null;
-export const config = new Proxy(
-  {},
-  {
-    get: (target, prop) => {
-      if (!_config) {
-        _config = nfigure();
-      }
-      return _config[prop as string];
-    },
+export const config = new Proxy({} as Record<string, unknown>, {
+  get: (target, prop) => {
+    if (!_config) {
+      _config = nfigure();
+    }
+    if (prop === "toJSON") {
+      return () => _config;
+    }
+
+    return _config[prop as string];
   },
-);
+});
 export default config;
 
 import {
