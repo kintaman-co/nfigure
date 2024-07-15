@@ -1,0 +1,1 @@
+export { defaultFileSearcher } from "./defaultFileSearcher";

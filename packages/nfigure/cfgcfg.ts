@@ -1,4 +1,4 @@
-import defaultFileSearcher from "./fileSearcher/defaultFileSearcher";
+import defaultFileSearcher from "./fileSearchers/defaultFileSearcher";
 import fileLoader from "./loaders/fileLoader";
 import jsonParser from "./parsers/jsonParser";
 import defaultValidator from "./validators/default";

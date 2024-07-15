@@ -2,7 +2,7 @@
 
 import { CfgInternal, Validator } from "../cfgcfg";
 
-export default function verAssert<T extends object>(
+export function verAssert<T extends object>(
   expectedVersion: number,
   validator: Validator<T>,
 ) {
@@ -31,3 +31,5 @@ export default function verAssert<T extends object>(
     return validator(value, configInternal);
   };
 }
+
+export default verAssert;

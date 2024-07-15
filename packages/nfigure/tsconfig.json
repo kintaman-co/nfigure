@@ -12,7 +12,7 @@
     "**/*.ts",
     "index.test.js",
     "verAssert.xtsx",
-    "fileSearcher/defaultFileSearcher.test.js"
+    "fileSearchers/defaultFileSearcher.test.js"
   ],
   "exclude": ["node_modules", "dist", "**/*.test.ts"]
 }

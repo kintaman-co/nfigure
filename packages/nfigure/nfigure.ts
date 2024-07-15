@@ -4,6 +4,8 @@ import { CfgCfg, CfgInternal, defaultCfgCfg, Mode } from "./cfgcfg";
 export function nfigure<T extends Record<string, unknown>>(cfgcfg?: CfgCfg<T>) {
   const cfgInt = {
     ...defaultCfgCfg,
+    // デフォルトコンフィグでは普通にファイルをロードしてしまうので、デフォルトコンフィグパターンは無視する
+    // istanbul ignore next
     ...(cfgcfg ?? {}),
   } as CfgInternal;
 
@@ -18,7 +20,13 @@ export function nfigure<T extends Record<string, unknown>>(cfgcfg?: CfgCfg<T>) {
 
 function loadMergedObject(cfgInt: CfgInternal) {
   const base = loadObject("base", cfgInt);
+  if (!base) {
+    throw new Error("base config is required");
+  }
   const patch = loadObject("patch", cfgInt);
+  if (!patch) {
+    return base;
+  }
   return mergeObjects(base, patch);
 }
 
@@ -31,6 +39,9 @@ function mergeObjects(
 
 function loadObject(mode: Mode, cfgInt: CfgInternal) {
   const text = loadText(mode, cfgInt);
+  if (!text) {
+    return;
+  }
   const parsed = cfgInt.parser(text, cfgInt);
   return parsed;
 }
@@ -58,8 +69,11 @@ function loadText(mode: Mode, cfgInt: CfgInternal) {
 
   // then find file path in default location
   const filesFound = cfgInt.fileSearcher(mode, cfgInt);
-  if (filesFound.length !== 1) {
+  if (filesFound.length > 1) {
     throw new Error(`expected 1 file, but found ${filesFound.length}`);
+  } else if (filesFound.length === 0) {
+    debug(`no ${mode} config found`);
+    return;
   }
   const file = filesFound[0];
   debug(`loading ${mode} config from file: ${file}`);

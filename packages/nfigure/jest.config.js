@@ -45,4 +45,9 @@ module.exports = {
    * カバレッジを収集するファイルのパターンです。
    */
   collectCoverageFrom: ["**/*.{ts,tsx}", "!**/node_modules/**", "!**/dist/**"],
+
+  /**
+   * カバレッジを収集しないファイルのパターンです。
+   */
+  coveragePathIgnorePatterns: ["HelpMeTyping.ts"],
 };
