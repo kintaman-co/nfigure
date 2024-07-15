@@ -5,6 +5,10 @@
     "test": "jest",
     "build": "tsc"
   },
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
   "keywords": [],
