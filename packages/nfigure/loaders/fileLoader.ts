@@ -1,5 +1,5 @@
-import { resolve } from "path";
-import { Mode, readFileSync } from "fs";
+import { resolve } from "node:path";
+import { Mode, readFileSync } from "node:fs";
 import { CfgInternal } from "../cfgcfg";
 
 export function fileLoader() {
