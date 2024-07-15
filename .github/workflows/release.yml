@@ -77,6 +77,8 @@ jobs:
         run: echo "PACKAGE_VERSION=$(cat lerna.json | jq -r .version)" >> $GITHUB_ENV
       - name: Install
         run: npm install
+      - name: Build
+        run: npm run build
       - name: Publish
         run: npm run ci:release
         env:
