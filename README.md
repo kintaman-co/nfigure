@@ -5,11 +5,11 @@
 ## Features
 
 - Simple and intuitive syntax
-- Supports multiple configuration formats (JSON, YAML, TOML, etc.)
 - Supports patching and merging configurations
 - Can be loaded from files, environment variables, or other sources
-- Easy-to-setup helper scripts
 - Plugins feature for extending functionality
+- Supports multiple configuration formats (JSON, YAML, TOML, etc.)\*
+- Easy-to-setup helper scripts(WIP)
 - Type-safe configuration values\*
 - Validation\*
 - Version/Environment assertion\*
@@ -36,11 +36,11 @@ To install `nfigure` manually, run the following command:
 npm install @kintaman-co/nfigure
 ```
 
-Optionally you can install the plugins you need:
+You can also install the plugins you need.
 
-```bash
-npm install @kintaman-co/nfigure-typebox @sinclair/typebox
-```
+Here is the list of external plugins:
+
+- [@kintaman-co/nfigure-typebox](./packages/nfigure-typebox/README.md)
 
 ## Configuration Loading Rules
 
@@ -68,11 +68,11 @@ console.log(config.message);
 
 If you want to customize the configuration, you can create a configuration file.
 
-Here is an example of a configuration for typebox typing and validation:
+Here is an example of a configuration with [`@kintaman-co/nfigure-typebox`](./packages/nfigure-typebox/README.md) plugin:
 
 ```js
 // config.js
-import { load } from "@kintaman-co/nfigure";
+import { nfigure } from "@kintaman-co/nfigure";
 import { validator as typeboxValidator } from "@kintaman-co/nfigure-typebox";
 import { Type } from "@sinclair/typebox";
 
@@ -81,7 +81,7 @@ const schema = Type.Object({
   DATABASE_URL: Type.String(),
 });
 
-export default load({
+export default nfigure({
   validator: typeboxValidator(schema), // give types and validates the configuration
 });
 ```

@@ -65,7 +65,7 @@ export type Loader = (
   fileFromEnv: boolean,
 ) => {
   content: string;
-  loadedPath?: string;
+  loadedPath: string;
 };
 export type FileSearcher = (
   mode: Mode,
