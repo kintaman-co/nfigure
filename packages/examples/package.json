@@ -13,6 +13,7 @@
   "description": "Typebox validator for nfigure",
   "dependencies": {
     "@kintaman-co/nfigure": "*",
+    "@kintaman-co/nfigure-typebox": "*",
     "@sinclair/typebox": "^0.32.34"
   }
 }
