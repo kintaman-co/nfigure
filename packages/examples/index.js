@@ -2,11 +2,18 @@ import { nfigure, config } from "@kintaman-co/nfigure";
 import { typeboxValidator } from "@kintaman-co/nfigure-typebox";
 import { Type } from "@sinclair/typebox";
 import assert from "node:assert";
-import { log } from "node:console";
-
-debugger;
+import { info } from "node:console";
 
 assert.ok(config, "config should be loaded");
+
+assert.strictEqual(config.base, "The base value", "base should be loaded");
+assert.strictEqual(
+  config.overriden,
+  "The patched value",
+  "overriden should be loaded",
+);
+assert.strictEqual(config.new, "The patched value", "new should be loaded");
+
 assert.deepStrictEqual(
   config.toJSON(),
   {
@@ -14,7 +21,7 @@ assert.deepStrictEqual(
     overriden: "The patched value",
     new: "The patched value",
   },
-  "config should be loaded and merged correctly",
+  "config should work with toJSON",
 );
 
 const customConfig = nfigure();
@@ -69,4 +76,4 @@ try {
   assert.ok(true, "config validation failed");
 }
 
-log("All tests passed");
+info("All tests passed");
