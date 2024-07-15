@@ -6,7 +6,7 @@
     "declaration": true,
     "declarationMap": true,
     "composite": true,
-    "tsBuildInfoFile": "dist/.tsbuildinfo"
+    "tsBuildInfoFile": "node_modules/.cache/nfigure.tsbuildinfo"
   },
   "include": [
     "**/*.ts",
