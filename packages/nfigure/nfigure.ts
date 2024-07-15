@@ -42,7 +42,9 @@ function loadText(mode: Mode, cfgInt: CfgInternal) {
   const jsonEnvValue = process.env[jsonEnvKey];
   if (jsonEnvValue) {
     debug(`loading ${mode} config from env...`);
-    return jsonEnvValue;
+    return {
+      content: jsonEnvValue,
+    };
   }
 
   // then find file path in Environment variables
@@ -66,6 +68,6 @@ function loadText(mode: Mode, cfgInt: CfgInternal) {
 
 // loggerはconfigに依存しており、そうなるとconfigのロードにloggerが必要になるため、pre-loggerな形でconsoleを使う。出荷時には無効化すること！
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-export function debug(msg: string) {
+function debug(msg: string) {
   //console.debug(msg);
 }

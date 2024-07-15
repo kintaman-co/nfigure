@@ -8,13 +8,20 @@ export function fileLoader() {
     configInternal: CfgInternal,
     mode: Mode,
     fileFromEnv: boolean,
-  ): string => {
+  ): {
+    content: string;
+    loadedPath: string;
+  } => {
     let normalizedPath = path;
     if (fileFromEnv) {
       normalizedPath = resolve(process.cwd(), path);
     }
 
-    return readFileSync(normalizedPath, "utf-8");
+    const content = readFileSync(normalizedPath, "utf-8");
+    return {
+      content,
+      loadedPath: normalizedPath,
+    };
   };
 }
 

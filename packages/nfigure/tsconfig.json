@@ -8,6 +8,11 @@
     "composite": true,
     "tsBuildInfoFile": "dist/.tsbuildinfo"
   },
-  "include": ["**/*.ts", "index.test.js", "verAssert.xtsx"],
+  "include": [
+    "**/*.ts",
+    "index.test.js",
+    "verAssert.xtsx",
+    "fileSearcher/defaultFileSearcher.test.js"
+  ],
   "exclude": ["node_modules", "dist", "**/*.test.ts"]
 }

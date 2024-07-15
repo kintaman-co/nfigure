@@ -1,6 +1,8 @@
-export function jsonParser() {
-  return (text: string): Record<string, unknown> => {
-    return JSON.parse(text);
+import type { Parser } from "../cfgcfg";
+
+export function jsonParser(): Parser {
+  return ({ content }): Record<string, unknown> => {
+    return JSON.parse(content);
   };
 }
 

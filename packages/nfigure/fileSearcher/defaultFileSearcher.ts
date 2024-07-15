@@ -1,7 +1,6 @@
 import path from "path";
 import { CfgInternal, Mode } from "../cfgcfg";
 import { statSync } from "fs";
-import { debug } from "../nfigure";
 
 export function defaultFileSearcher() {
   return (mode: Mode, configInternal: CfgInternal): string[] => {
@@ -43,7 +42,6 @@ export function defaultFileSearcher() {
         foundFiles.push(fullpath);
       } catch (e) {
         // だいたいのケースは ENOENT。EACCESなどもありうるが、それは一旦考慮しない
-        debug(`config file not found: ${fullpath}`);
       }
     }
     return foundFiles;

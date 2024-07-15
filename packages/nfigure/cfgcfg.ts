@@ -52,7 +52,10 @@ export type Validator<T> = (
 ) => value is T;
 
 export type Parser = (
-  text: string,
+  text: {
+    content: string;
+    loadedPath?: string;
+  },
   configInternal: CfgInternal,
 ) => Record<string, unknown>;
 export type Loader = (
@@ -60,7 +63,10 @@ export type Loader = (
   configInternal: CfgInternal,
   mode: Mode,
   fileFromEnv: boolean,
-) => string;
+) => {
+  content: string;
+  loadedPath?: string;
+};
 export type FileSearcher = (
   mode: Mode,
   configInternal: CfgInternal,
