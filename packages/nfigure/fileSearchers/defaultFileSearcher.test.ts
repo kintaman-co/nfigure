@@ -2,7 +2,7 @@
 import { jest, it, expect } from "@jest/globals";
 
 const statSync = jest.fn();
-jest.mock("fs", () => {
+jest.mock("node:fs", () => {
   return {
     statSync,
   };
