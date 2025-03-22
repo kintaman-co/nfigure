@@ -1,6 +1,6 @@
 import path from "path";
 import { CfgInternal, Mode } from "../cfgcfg";
-import { statSync } from "fs";
+import { statSync } from "node:fs";
 
 export function defaultFileSearcher() {
   return (mode: Mode, configInternal: CfgInternal): string[] => {
