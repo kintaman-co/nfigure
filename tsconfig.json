@@ -20,7 +20,6 @@
   "include": [
     "packages/**/*.ts",
     "packages/nfigure/index.test.js",
-    "packages/nfigure/verAssert.xts",
     "packages/nfigure/fileSearchers/defaultFileSearcher.test.js"
   ],
   "exclude": ["node_modules", "dist", "packages/**/dist"]

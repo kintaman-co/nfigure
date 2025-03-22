@@ -18,6 +18,6 @@
   "description": "Typebox validator for nfigure",
   "peerDependencies": {
     "@kintaman-co/nfigure": ">=0.0.3, <1.0.0",
-    "@sinclair/typebox": "^0.32.34"
+    "@sinclair/typebox": ">=0.32"
   }
 }
