@@ -9,20 +9,22 @@
 - Can be loaded from files, environment variables, or other sources
 - Zero dependencies
 - Plugins feature for extending functionality
-- Supports multiple configuration formats (JSON, YAML, TOML, etc.)\*
+- Supports multiple configuration formats (JSON, YAML, TOML, etc.)\*\*
 - Easy-to-setup helper scripts(WIP)
-- Deno support(Partially)
+- Deno support\*\*
 - Type-safe configuration values\*
+- Express install\*\*
 - Validation\*
-- Version/Environment assertion\*
-- Encryption\*
+- Version/Environment assertion\*\*
+- Encryption\*\*
 - And more...
 
 \*: With optional plugins
+\*\*: Planned
 
 ## Installation
 
-### Express installation with helper script
+### Express installation with helper script (PLANNED)
 
 To install `nfigure`, simply run the following command in the project directory you want to use it in:
 
